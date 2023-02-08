@@ -12,9 +12,9 @@ isRD（初始化）
 
 getHtml（get提交，获取源码）
 
-postHtml(post提交，获取源码)
+postHtml（post提交，获取源码）
 
-postJson（返回值必须是Json,否则出错。【注：有的网站还必须要你Json提交，否则它给你报错】)
+postJson（返回值必须是Json,否则出错。【注：有的网站还必须要你Json提交，否则它给你报错】）
 
 typeJson（自定义类型提交json返回）
 
