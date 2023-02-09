@@ -3,7 +3,7 @@
 这是针对 rendie.com 网站的功能增强开发的谷歌插件。
 
 为什么要装这个插件？
-因为它能接管【键盘】【鼠标】【屏幕】，实际网页人工智能。
+因为它能模拟【键盘】【鼠标】操作，实现自动化办公。
 
 ![](https://raw.githubusercontent.com/rendie-com/rendie-chrome/main/img/Screenshot.jpg)
 
