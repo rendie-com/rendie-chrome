@@ -1,0 +1,88 @@
+{
+   "action": {
+      "default_icon": {
+         "19": "icons/icon19.png",
+         "38": "icons/icon38.png"
+      },
+      "browser_style": false,
+      "default_title": "点击可以截图"
+   },
+   "background": {
+      "service_worker": "js/background.js",
+      "type": "module"
+   },
+   "content_scripts": [
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "js": [
+            "js/content-script.js"
+         ],
+         "run_at": "document_end"
+      }
+   ],
+   "default_locale": "zh_CN",
+   "homepage_url": "https://www.rendie.com/",
+   "description": "__MSG_EXTENSION_DESCRIPTION__",
+   "host_permissions": [
+      "<all_urls>"
+   ],
+   "icons": {
+      "16": "icons/icon16.png",
+      "19": "icons/icon19.png",
+      "24": "icons/icon24.png",
+      "32": "icons/icon32.png",
+      "38": "icons/icon38.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png",
+      "256": "icons/icon256.png"
+   },
+   "key": "AIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmSabvzMg7OIIuYPWSvRGzDrainmTIyvRaA0ZQ8nqY8z88z/d7AlzcVo2DjM7aycs9jGj+o2xfTDXbrYNlcmx5RnwAbZr5rZyXrQcnNzU/UqCa3+kqzqheyUwndqlnrfD4XXvwgSiCfWSiuufRrJAP4O6JnYqiZ/3l57st9BhPK4w1f1kzsV6ZykGFX90GXLXi08JKGHhw5o5gH88We2pEzWvTaifWSf0ovar4/F72y+QrLh32gx8L+ky+HpnDX7zxoU4WJTb/WaOTUJeRzh+z5UbwIRekqQRptGz7OQnhIJpMvhvRgDCDkbXInhegf6wnG5GnqQiHe3i2pBj22YbewIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_EXTENSION_NAME__",
+   "devtools_page": "devtools/index.html",
+   "permissions": [
+      "webRequest",
+      "declarativeNetRequest",
+      "downloads",
+      "notifications",
+      "storage",
+      "cookies",
+      "webNavigation",
+      "activeTab",
+      "unlimitedStorage",
+      "clipboardWrite",
+      "tabs",
+      "scripting",
+      "debugger"
+   ],
+   "declarative_net_request": {
+      "rule_resources": [
+         {
+            "enabled": true,
+            "id": "rules",
+            "path": "rules.json"
+         }
+      ]
+   },
+   "commands": {
+      "_execute_action": {
+         "suggested_key": {
+            "default": "Ctrl + Shift + A"
+         }
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2024.9.20",
+   "web_accessible_resources": [
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "resources": [
+            "inject/index.js"
+         ]
+      }
+   ]
+}
