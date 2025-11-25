@@ -49,7 +49,37 @@ export const common_fetch = {
                 next(str)
             }
         })
-
+    },   
+    postHeadersFetch: function (url,headersObj, data, type, next) {
+        const headers = new Headers();
+        for(let k in headersObj){
+            headers.append(k,headersObj[k])
+        }
+        headers.append('Content-Type', 'application/json');
+        ////////////////////////////////
+        fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: data
+        }).then(response => {
+            if(type=="json"){
+                return response.json();
+            }
+            else if(type=="gbk"){
+                return response.arrayBuffer()                
+            }
+            else{
+                return response.text();
+            }
+        }).then(str => {
+            if(type=="gbk"){
+                const decoder = new TextDecoder("gbk");
+                next(decoder.decode(str))
+            }
+            else{
+                next(str)
+            }
+        })
     },   
     postFetch: function (url, data, next) {
         const headers = new Headers();

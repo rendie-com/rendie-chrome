@@ -98,6 +98,7 @@ export const index =
             // ////////////////////////////////////////////////////////
             case "getFetch": common_fetch.getFetch(request.url, request.type, next); break;//获取URL内容
             case "getHeadersFetch": common_fetch.getHeadersFetch(request.url, request.headersObj, request.type, next); break;//获取URL内容
+            case "postHeadersFetch": common_fetch.postHeadersFetch(request.url, request.headersObj, request.data, request.type, next); break;//获取URL内容
             case "postFetch": common_fetch.postFetch(request.url, request.data, next); break;//普通提交（返回的内容不一定是json格式
             case "postBodyFetch": common_fetch.postBodyFetch(request.url, request.body, request.type, next); break;//表单提交
             case "typeFetch": common_fetch.typeFetch(request.url, request.type, request.data, next); break;//指定类型提交

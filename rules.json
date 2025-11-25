@@ -67,14 +67,35 @@
           "value": "\"Windows\""
         },
         {
-          "header":  "sec-fetch-site",
+          "header": "sec-fetch-site",
           "operation": "set",
           "value": "same-site"
-        }       
+        }
       ]
     },
     "condition": {
       "urlFilter": "||h5api.m.1688.com/h5/mtop.1688.trading.dataline.service/1.0"
+    }
+  },
+  {
+    "id": 4,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Referer",
+          "operation": "set",
+          "value": "https://seller.shopee.cn"
+        },
+        {
+          "header": "Origin",
+          "operation": "set",
+          "value": "https://seller.shopee.cn"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||seller.shopee.cn/api/mkt/cmt/nominated/nominated_entity_list"
     }
   }
 ]
