@@ -96,6 +96,11 @@
           "header": "af-ac-enc-dat",
           "operation": "set",
           "value": "null"
+        },
+        {
+          "header": "af-ac-enc-sz-token",
+          "operation": "set",
+          "value": "null"
         }
       ]
     },
