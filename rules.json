@@ -91,6 +91,11 @@
           "header": "Origin",
           "operation": "set",
           "value": "https://seller.shopee.cn"
+        },
+        {
+          "header": "af-ac-enc-dat",
+          "operation": "set",
+          "value": "null"
         }
       ]
     },
